@@ -36,8 +36,9 @@ export default{
                     <p style="margin-left:5px">Keep me signed in</p>
                     <a href="#" class="activeLink">Forgot your password?</a>
                   </div>
-             
+              <router-link  to="/home">
                 <button type="submit" class="submit-button">Sign In</button>
+             </router-link>
             </form>
             <div class="signup-footer">
                  <span>You don't have account? 
