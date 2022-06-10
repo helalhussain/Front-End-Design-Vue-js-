@@ -39,7 +39,7 @@
              <div v-if="show" class="profileCheck">
                  <div style="margin-bottom:10px">
                    <router-link  to="/">
-                    <a class="activeLink"><h4>Sign In</h4></a>
+                    <a class="activeLink"><h4>Sign in</h4></a>
                     </router-link>
                      <p>Already have an account?</p>
                  </div>
@@ -49,7 +49,6 @@
                     </router-link>
                         <p>You don't have an account?</p>
                 </div>
-                
              </div>
     </div>
 </template>
@@ -362,7 +361,7 @@ span.material-icons {
 }
 .main-body {
     background: #D8E2EF;
-    padding: 8% 0;
+    padding: 5% 0;
 }
 .signup {
     margin: 0 auto;
