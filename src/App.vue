@@ -20,5 +20,6 @@ export default{
 </template>
 
 <style>
-
+@import './assets/header.css';
+@import './assets/home.css';
 </style>

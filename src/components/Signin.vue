@@ -5,10 +5,21 @@ export default{
   name:'Signin',
   components:{
       Header,
-      Footer
-  }
-
-}
+      Footer,
+    data(){
+        return {
+            email:'',
+            password:''
+        }
+    },
+    methods:{
+        signinBtn(){
+            alert("success")
+        }
+    }
+ 
+  
+}}
 </script>
 
 
@@ -22,7 +33,7 @@ export default{
                 <h2 style="margin-bottom:0px"> Sign In  </h2>
                 <p> Your Blockchain Education Account!</p>
             </div>
-            <form class="form" >
+            <div class="form" >
                 <div class="input-field">
                     <input type="text" required>
                     <label>E-mail</label>
@@ -37,9 +48,9 @@ export default{
                     <a href="#" class="activeLink">Forgot your password?</a>
                   </div>
               <router-link  to="/home">
-                <button type="submit" class="submit-button">Sign In</button>
+                <button v-on:click="signinBtn" type="submit" class="submit-button">Sign In</button>
              </router-link>
-            </form>
+            </div>
             <div class="signup-footer">
                  <span>You don't have account? 
                        <router-link  to="/signup">

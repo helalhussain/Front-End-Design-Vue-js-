@@ -1,0 +1,259 @@
+
+/* -------------------- Basic Setup --------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@200;400;500&display=swap'); 
+:root {
+    --backgroundColor:#ffffff
+    --headingColor:#000000;
+    --paragraphColor: #000000;
+    --buttonBgColor:  #046EB6;
+    --highlightText: #069C84;
+    --textLink:#3366CC;
+    --pragFontSize:20px;
+    --h1:60px;
+    --h2:42px;
+    --h3:36px;
+    --h4:30px;
+    --h5:24px;
+    --h6:20px;
+  }
+  @media screen and (max-width: 736px) {
+    :root {
+        --backgroundColor:#ffffff
+        --headingColor:#000000;
+        --paragraphColor: #000000;
+        --buttonBgColor:  #046EB6;
+        --highlightText: #069C84;
+        --textLink:#3366CC;
+        --pragFontSize:20px;
+        --h1:50px;
+        --h2:32px;
+        --h3:26px;
+        --h4:22px;
+        --h5:20px;
+        --h6:18px;
+      }
+    }
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Rokkitt', serif;
+}
+
+body,
+form,
+fieldset,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+    /* vertical-align: bottom; */
+}
+
+a {
+    text-decoration:none;
+    color: #000000;
+    font-size: 22px;
+    font-weight: 200;
+    transform: all .5s ease-in-out;
+}
+.activeLink{
+    color: #046EB6;
+}
+a:hover {
+    text-decoration: none;
+    color:  var(--highlightText);
+    transform: all .5s ease-in-out ;
+}
+
+
+/* ------------------- Defaults ------------------- */
+
+html {
+    height: 100%;
+    overflow: auto;
+    overflow-y: scroll;
+}
+
+body {
+    height: 100%;
+    background: var(--backgroundColor);
+    color: var(--paragraphColor);
+    box-sizing: border-box;
+}
+
+
+/* ------------------ Typography ------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0 0 1rem;
+}
+
+p,
+ul,
+ol {
+    font-size: var(--pragFontSize);
+}
+p{
+    font-weight: 300;
+}
+ul {
+    margin: 0 ;
+    list-style: none;
+}
+
+h1 {
+    font-size:var(--h1);
+    font-weight: 200;
+}
+
+h2 {
+    font-size: var(--h2);
+    font-weight: 400;
+}
+
+h3 {
+    font-size: var(--h3);
+    font-weight: 500;
+}
+
+h4 {
+    font-size: var(--h4);
+    font-weight: 400;
+}
+
+h5 {
+    font-size: var(--h5); 
+    font-weight: 200;
+}
+
+h6 {
+    font-size: var(--h6);
+    font-weight: 400;
+}
+
+label {
+    color: rgb(128, 128, 128);
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 10px;
+    transition: all 0.2s ease 0s;
+    font-size: 18px;
+}
+
+
+
+
+/* Programme Section */
+
+.programe-bar {
+    margin-top: 1px;
+    background: white;
+    padding: 20px 0px;
+}
+
+.search-programe {
+    background: rgba(216, 226, 239, 0.6);
+    padding: 60px 0px;
+}
+
+.searchBox {
+    background: white;
+    padding: 8px 20px;
+    width: 60%;
+    border-radius: 5px;
+    display: inline-flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+.searchBox input[type="text"], input[type="password"] {
+    width: 95%;
+    height: 32px;
+    padding: 0px 10px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 3px;
+    transition: 0.2s ease-in;
+    outline: none;
+}
+input.searchInput::placeholder {
+    font-size: 20px;
+}
+.solutions {
+    margin: 60px 0px;
+}
+.card {
+    display: inline-flex;
+    width: 30rem;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 70px;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px 20px;
+}
+
+.solutions h2 {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.cardText h5 {
+    margin: 0px 0px -25px;
+    font-weight: 500;
+}
+
+@media screen and (max-width:600px) {
+
+.searchBox {
+    background: white;
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 5px;
+    display: inline-flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+.card {
+    display: inline-flex;
+    width: 95%;
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+input.searchInput::placeholder {
+    font-size: 16px;
+}
+.cardText h5 {
+    margin: 0px 0px -15px;
+    font-weight: 500;
+}
+}
