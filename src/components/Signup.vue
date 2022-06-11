@@ -2,37 +2,45 @@
 import Header from './Header.vue'
 import Footer from './Footer.vue'
 import axios from 'axios'
-export default{
-  name:'Signup',
-  components:{
-      Header,
-      Footer
-  },
-  data(){
-      return { 
-          email:'',
-          password:'',
-          rePassword:''
+export default {
+    name: 'Signup',
+    components: {
+        Header,
+        Footer
+    },
+    data() {
+        return {
+            email: '',
+            password: '',
+            rePassword: ''
 
-      }
-  },
-  methods:{
-     async signupBtn(){
-          console.warn("signupBtn",this.email,this.password,this.rePassword)
-      let result = await axios.post("http://localhost:3000/signup",{
-        email:this.email,
-        password:this.password,
-        rePassword:this.rePassword
-      });
-      console.warn(result);
-      if(result.status==201){
+        }
+    },
+    methods: {
+        async signupBtn() {
+            console.warn("signupBtn", this.email, this.password, this.rePassword);
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
 
-            alert("Sign Up Done");
-      }
-      }
-  }
+            var raw = JSON.stringify({
+                email: this.email,
+                password: this.password,
+            });
 
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
 
+            fetch("http://localhost:3000/signup", requestOptions)
+                .then(response => response.text())
+                .then(result => console.log(result))
+                .catch(error => console.log('error', error));
+                push({name:home});
+        }
+    }
 }
 </script>
 
@@ -50,11 +58,11 @@ export default{
                     <label>E-mail</label>
                 </div>
                 <div class="input-field">
-                    <input type="password" v-model="password" required>
+                    <input type="password" v-model="password" id="passField" required>
                     <label>Password</label>
                 </div>
                 <div class="input-field">
-                    <input type="password" v-model="rePassword" required>
+                    <input type="password" v-model="rePassword"   id="passField" required>
                     <label>Re-enter Password</label>
                 </div>
                  <div class="checkbox-field">

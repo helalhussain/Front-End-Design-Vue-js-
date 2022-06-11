@@ -85,6 +85,7 @@ h5,
 h6,
 p {
     margin: 0 0 1rem;
+    font-family: 'Rokkitt', serif;
 }
 
 p,
@@ -94,6 +95,7 @@ ol {
 }
 p{
     font-weight: 300;
+    font-family: 'Rokkitt';
 }
 ul {
     margin: 0 ;
@@ -103,31 +105,37 @@ ul {
 h1 {
     font-size:var(--h1);
     font-weight: 200;
+    font-family: 'Rokkitt';
 }
 
 h2 {
     font-size: var(--h2);
     font-weight: 400;
+    font-family: 'Rokkitt';
 }
 
 h3 {
     font-size: var(--h3);
     font-weight: 500;
+    font-family: 'Rokkitt';
 }
 
 h4 {
     font-size: var(--h4);
     font-weight: 400;
+    font-family: 'Rokkitt';
 }
 
 h5 {
     font-size: var(--h5); 
     font-weight: 200;
+    font-family: 'Rokkitt';
 }
 
 h6 {
     font-size: var(--h6);
     font-weight: 400;
+    font-family: 'Rokkitt';
 }
 
 label {
@@ -363,7 +371,7 @@ span.material-icons {
     display: flex;
     align-items: baseline;
 }
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], #passField {
     width: 92%;
     height: 30px;
     padding: 5px 15px;
@@ -372,16 +380,21 @@ input[type="text"], input[type="password"] {
     border-radius: 3px;
     transition: 0.2s ease-in;
     outline: none;
+    font-size:20px;
+    font-weight: 400;
+    color: #000000;
+
 }
 input[type="checkbox"] {
     width: 18px;
+    
 }
 
 input::-webkit-input-placeholder {
     transition: 0.2s ease-in;
 }
 
-input[type="text"]:focus, input[type="password"]:focus {
+input[type="text"]:focus, input[type="password"]:focus, #passField {
     height: 30px;
     padding: 5px 15px;
     transition: 0.2s ease-in;

@@ -1,10 +1,10 @@
 <script>
-import Header from './Header.vue'
+import HeaderHome from './HeaderHome.vue'
 import Footer from './Footer.vue'
 export default{
   name:'Home',
   components:{
-      Header,
+      HeaderHome,
       Footer
   }
 
@@ -14,7 +14,7 @@ export default{
 
 
 <template>
-   <Header/>
+   <HeaderHome/>
     <!-- *---------------------------------Home------------------* -->
     
   <!-- *---------------------------------Programe Section------------------* -->
